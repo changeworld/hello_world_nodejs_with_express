@@ -3,5 +3,5 @@ var mocha = require('gulp-mocha');
 
 gulp.task('test', function() {
   return gulp.src('./test/**/*.js')
-    .pipe(mocha());
+    .pipe(mocha({reporter: 'mocha-junit-reporter'}));
 });
